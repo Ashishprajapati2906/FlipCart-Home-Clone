@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online shoping site for mobile</title>
+    <style>
+      #navbar {
+        /* position: fixed; */
+        height: 60px;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      /* #navbar_child {
+        width: 90%;
+      } */
+      #navbar > div {
+        display: flex;
+        justify-content: center;
+      }
+      #navbar > div:nth-child(1) {
+        height: 50px;
+        width: 100px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+      }
+      #navbar > div:nth-child(2) {
+        height: 50px;
+        width: 750px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+      }
+      #navbar > div:nth-child(3) {
+        height: 50px;
+        width: 100px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+      }
+      #navbar > div:nth-child(4) {
+        height: 50px;
+        width: 100px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+      }
+      #navbar > div:nth-child(5) {
+        height: 50px;
+        width: 150px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+      }
+      /* Navbar end */
+
+      /* Navbar2 start */
+
+      #navbar2 {
+        height: 120px;
+        width: 98%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        margin: 20px auto;
+      }
+      #navbar2_child {
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: auto;
+      }
+      #navbar2 > #navbar2_child > div {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* border: 2px solid red; */
+        height: 110px;
+        /* border: 2px solid red; */
+      }
+
+      #navbar2 > #navbar2_child > div > img {
+        /* border: 2px solid rgb(242, 255, 0); */
+        align-items: center;
+      }
+
+      #navbar2 > #navbar2_child > div:nth-child(1) > p {
+        padding-top: 10px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(2) > p {
+        padding-top: 10px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(3) > p {
+        margin: 12px 0px 0px 0px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(3) > img {
+        margin: 0px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(4) > p {
+        padding-top: 23px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(5) > p {
+        padding-top: 13px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(5) > img {
+        margin-left: 25px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(6) > p {
+        padding-top: 23px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(7) > p {
+        padding-top: 33px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(8) > p {
+        padding-top: 10px;
+      }
+      #navbar2 > #navbar2_child > div:nth-child(9) > p {
+        padding-top: 10px;
+      }
+
+      /* Navbar2 end */
+
+      /* Slider code start */
+
+      /* Slider styles */
+      #slider-container {
+        max-width: 98%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Navigation arrows */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: #fff;
+        background-color: #333;
+        padding: 10px;
+        border: none;
+        outline: none;
+        user-select: none;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      /* Input radio buttons for slider control */
+      #slide1,
+      #slide2,
+      #slide3 {
+        display: none;
+      }
+
+      #slide1:checked ~ #slides {
+        transform: translateX(0%);
+      }
+      #slide2:checked ~ #slides {
+        transform: translateX(-100%);
+      }
+      #slide3:checked ~ #slides {
+        transform: translateX(-200%);
+      }
+
+      #slider-container > #slides > .slide > img {
+        height: 250px;
+      }
+      /* Slider code end */
+
+      /* Image bar start */
+      #image_bar {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 20px;
+        /* margin: auto; */
+      }
+      #image_bar > div:nth-child(1) {
+        height: 200px;
+        width: 390px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      /* #image_bar > div > img {
+        height: 200px;
+        width: 390px;
+      } */
+      .image {
+        height: 200px;
+        width: 390px;
+      }
+      #image_bar > div:nth-child(2) {
+        height: 200px;
+        width: 390px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #image_bar > div:nth-child(3) {
+        height: 200px;
+        width: 390px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      #image_bar > div:nth-child(4) {
+        height: 200px;
+        width: 270px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      #image_bar_special {
+        height: 200px;
+        width: 270px;
+      }
+
+      /* Image bar end */
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <!-- <div id="navbar_child"> -->
+      <div><img src="logo.png" alt="logo" /></div>
+      <div><input type="text" placeholder="Search" /></div>
+      <div><p>Login</p></div>
+      <div><p>Cart</p></div>
+      <div><p>Become a seller</p></div>
+      <!-- </div> -->
+    </div>
+    <!-- Navbar end -->
+    <!-- Navbar2 Start -->
+    <div id="navbar2">
+      <div id="navbar2_child">
+        <div>
+          <img src="Grocery.png" alt="" />
+          <p>Grocery</p>
+        </div>
+        <div>
+          <img src="Mobiles.png" alt="" />
+          <p>Mobiles</p>
+        </div>
+        <div>
+          <img src="Fashion.png" alt="" />
+          <p>Fashion</p>
+        </div>
+        <div>
+          <img src="Electronics.png" alt="" />
+          <p>Electronics</p>
+        </div>
+        <div>
+          <img src="Home&Furniture.png" alt="" />
+          <p>Home & Furniture</p>
+        </div>
+        <div>
+          <img src="Appliances.png" alt="" />
+          <p>Appliances</p>
+        </div>
+        <div>
+          <img src="Travel.png" alt="" />
+          <p>Travel</p>
+        </div>
+        <div>
+          <img src="Beauty&Toy.png" alt="" />
+          <p>Beauty,Toys&More</p>
+        </div>
+        <div>
+          <img src="Two wheeler.png" alt="" />
+          <p>Two wheeler</p>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar2 End -->
+
+    <!-- Slider Start -->
+    <div id="slider-container">
+      <input type="radio" name="slider" id="slide1" checked />
+      <input type="radio" name="slider" id="slide2" />
+      <input type="radio" name="slider" id="slide3" />
+
+      <div id="slides">
+        <div class="slide"><img src="slider_1.jpg" alt="Slide 1" /></div>
+        <div class="slide"><img src="slider_2.jpg" alt="Slide 2" /></div>
+        <div class="slide"><img src="slider_3.jpg" alt="Slide 3" /></div>
+
+        <!-- Add more slides as needed -->
+      </div>
+
+      <label for="slide1" class="prev" onclick="changeSlide(-1)">❮</label>
+      <label for="slide2" class="next" onclick="changeSlide(1)">❯</label>
+      <label for="slide3" class="next" onclick="changeSlide(-1)">❯</label>
+    </div>
+    <!-- Slider End -->
+
+    <!-- Image bar start -->
+    <div id="image_bar">
+      <div><img src="first.png" alt="image" class="image" /></div>
+      <div><img src="second.png" alt="image" class="image" /></div>
+      <div><img src="third.png" alt="image" class="image" /></div>
+      <div><img src="fourth.png" alt="image" id="image_bar_special" /></div>
+    </div>
+
+    <!-- Image bar end -->
+  </body>
+</html>
